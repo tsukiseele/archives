@@ -14,5 +14,5 @@ export const SChip = import('../..\\components\\SChip\\index.vue' /* webpackChun
 export const SLabelClouds = import('../..\\components\\SLabelClouds\\index.vue' /* webpackChunkName: "components/s-label-clouds" */).then(c => wrapFunctional(c.default || c))
 export const SMarkdown = import('../..\\components\\SMarkdown\\index.vue' /* webpackChunkName: "components/s-markdown" */).then(c => wrapFunctional(c.default || c))
 export const SPagination = import('../..\\components\\SPagination\\index.vue' /* webpackChunkName: "components/s-pagination" */).then(c => wrapFunctional(c.default || c))
-export const TheBanner = import('../..\\components\\TheBanner\\index.vue' /* webpackChunkName: "components/the-banner" */).then(c => wrapFunctional(c.default || c))
 export const SPostItem = import('../..\\components\\SPostItem\\SPostItem.vue' /* webpackChunkName: "components/s-post-item" */).then(c => wrapFunctional(c.default || c))
+export const TheBanner = import('../..\\components\\TheBanner\\index.vue' /* webpackChunkName: "components/the-banner" */).then(c => wrapFunctional(c.default || c))

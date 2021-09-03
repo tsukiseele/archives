@@ -693,8 +693,8 @@ __webpack_require__.d(components_namespaceObject, "SChip", function() { return S
 __webpack_require__.d(components_namespaceObject, "SLabelClouds", function() { return SLabelClouds; });
 __webpack_require__.d(components_namespaceObject, "SMarkdown", function() { return SMarkdown; });
 __webpack_require__.d(components_namespaceObject, "SPagination", function() { return SPagination; });
-__webpack_require__.d(components_namespaceObject, "TheBanner", function() { return TheBanner; });
 __webpack_require__.d(components_namespaceObject, "SPostItem", function() { return SPostItem; });
+__webpack_require__.d(components_namespaceObject, "TheBanner", function() { return TheBanner; });
 
 // EXTERNAL MODULE: external "vue"
 var external_vue_ = __webpack_require__(0);
@@ -900,7 +900,7 @@ async function setContext(app, context) {
   // If context not defined, create it
   if (!app.context) {
     app.context = {
-      isStatic: false,
+      isStatic: true,
       isDev: false,
       isHMR: false,
       app,
@@ -914,14 +914,6 @@ async function setContext(app, context) {
         "BASE_URL": "http://localhost:10737"
       }
     }; // Only set once
-
-    if (context.req) {
-      app.context.req = context.req;
-    }
-
-    if (context.res) {
-      app.context.res = context.res;
-    }
 
     if (context.ssrContext) {
       app.context.ssrContext = context.ssrContext;
@@ -2341,6 +2333,16 @@ const layouts = {
 
   async mounted() {
     this.$loading = this.$refs.loading;
+
+    if (this.isPreview) {
+      if (this.$store && this.$store._actions.nuxtServerInit) {
+        this.$loading.start();
+        await this.$store.dispatch('nuxtServerInit', this.context);
+      }
+
+      await this.refresh();
+      this.$loading.finish();
+    }
   },
 
   watch: {
@@ -2353,6 +2355,10 @@ const layouts = {
 
     isFetching() {
       return this.nbFetching > 0;
+    },
+
+    isPreview() {
+      return Boolean(this.$options.previewData);
     }
 
   },
@@ -2445,6 +2451,62 @@ const layouts = {
       }
 
       return Promise.resolve(layouts['_' + layout]);
+    },
+
+    getRouterBase() {
+      return Object(external_ufo_["withoutTrailingSlash"])(this.$router.options.base);
+    },
+
+    getRoutePath(route = '/') {
+      const base = this.getRouterBase();
+      return Object(external_ufo_["withoutTrailingSlash"])(Object(external_ufo_["withoutBase"])(Object(external_ufo_["parsePath"])(route).pathname, base));
+    },
+
+    getStaticAssetsPath(route = '/') {
+      const {
+        staticAssetsBase
+      } = window.__NUXT__;
+      return urlJoin(staticAssetsBase, this.getRoutePath(route));
+    },
+
+    async fetchStaticManifest() {
+      return window.__NUXT_IMPORT__('manifest.js', Object(external_ufo_["normalizeURL"])(urlJoin(this.getStaticAssetsPath(), 'manifest.js')));
+    },
+
+    setPagePayload(payload) {
+      this._pagePayload = payload;
+      this._fetchCounters = {};
+    },
+
+    async fetchPayload(route, prefetch) {
+      const path = Object(external_ufo_["decode"])(this.getRoutePath(route));
+      const manifest = await this.fetchStaticManifest();
+
+      if (!manifest.routes.includes(path)) {
+        if (!prefetch) {
+          this.setPagePayload(false);
+        }
+
+        throw new Error(`Route ${path} is not pre-rendered`);
+      }
+
+      const src = urlJoin(this.getStaticAssetsPath(route), 'payload.js');
+
+      try {
+        const payload = await window.__NUXT_IMPORT__(path, Object(external_ufo_["normalizeURL"])(src));
+
+        if (!prefetch) {
+          this.setPagePayload(payload);
+        }
+
+        return payload;
+      } catch (err) {
+        if (!prefetch) {
+          this.setPagePayload(false);
+        }
+
+        throw err;
+      }
     }
 
   },
@@ -2546,8 +2608,8 @@ const SChip = __webpack_require__.e(/* import() | components/s-chip */ 1).then(_
 const SLabelClouds = __webpack_require__.e(/* import() | components/s-label-clouds */ 4).then(__webpack_require__.bind(null, 97)).then(c => wrapFunctional(c.default || c));
 const SMarkdown = __webpack_require__.e(/* import() | components/s-markdown */ 5).then(__webpack_require__.bind(null, 98)).then(c => wrapFunctional(c.default || c));
 const SPagination = __webpack_require__.e(/* import() | components/s-pagination */ 6).then(__webpack_require__.bind(null, 99)).then(c => wrapFunctional(c.default || c));
-const TheBanner = __webpack_require__.e(/* import() | components/the-banner */ 11).then(__webpack_require__.bind(null, 100)).then(c => wrapFunctional(c.default || c));
-const SPostItem = __webpack_require__.e(/* import() | components/s-post-item */ 7).then(__webpack_require__.bind(null, 101)).then(c => wrapFunctional(c.default || c));
+const SPostItem = __webpack_require__.e(/* import() | components/s-post-item */ 7).then(__webpack_require__.bind(null, 100)).then(c => wrapFunctional(c.default || c));
+const TheBanner = __webpack_require__.e(/* import() | components/the-banner */ 11).then(__webpack_require__.bind(null, 101)).then(c => wrapFunctional(c.default || c));
 // CONCATENATED MODULE: ./.nuxt/components/plugin.js
 
 
@@ -3457,7 +3519,11 @@ const createNext = ssrContext => opts => {
     routePath: ''
   };
   ssrContext.fetchCounters = {}; // Remove query from url is static target
-  // Public runtime config
+
+  if (ssrContext.url) {
+    ssrContext.url = ssrContext.url.split('?')[0];
+  } // Public runtime config
+
 
   ssrContext.nuxt.config = ssrContext.runtimeConfig.public;
 
@@ -3490,7 +3556,9 @@ const createNext = ssrContext => opts => {
 
     ssrContext.rendered = () => {
       // Add the state from the vuex store
-      ssrContext.nuxt.state = store.state;
+      ssrContext.nuxt.state = store.state; // Stop recording store mutations
+
+      ssrContext.unsetMutationObserver();
     };
   };
 
@@ -3572,11 +3640,16 @@ const createNext = ssrContext => opts => {
 
   if (ssrContext.nuxt.error) {
     return renderErrorPage();
-  }
+  } // Record store mutations for full-static after nuxtServerInit and Middleware
+
+
+  ssrContext.nuxt.mutations = [];
+  ssrContext.unsetMutationObserver = store.subscribe(m => {
+    ssrContext.nuxt.mutations.push([m.type, m.payload]);
+  });
   /*
   ** Set layout
   */
-
 
   let layout = Components.length ? Components[0].options.layout : layouts_error.layout;
 
