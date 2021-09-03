@@ -24,7 +24,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 97:
+/***/ 96:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -91,7 +91,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var SLabelClouds = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {SChip: function () { return __webpack_require__.e(/* import() | components/s-chip */ 1).then(__webpack_require__.bind(null, 96)).then(function(m) { return m['default'] || m }) }})
+installComponents(component, {SChip: function () { return __webpack_require__.e(/* import() | components/s-chip */ 1).then(__webpack_require__.bind(null, 94)).then(function(m) { return m['default'] || m }) }})
 
 
 /***/ })

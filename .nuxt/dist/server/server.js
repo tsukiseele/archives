@@ -690,11 +690,11 @@ __webpack_require__.d(components_namespaceObject, "TheLive2d", function() { retu
 __webpack_require__.d(components_namespaceObject, "TheLive2dTools", function() { return TheLive2dTools; });
 __webpack_require__.d(components_namespaceObject, "TheNav", function() { return TheNav; });
 __webpack_require__.d(components_namespaceObject, "SChip", function() { return SChip; });
-__webpack_require__.d(components_namespaceObject, "SLabelClouds", function() { return SLabelClouds; });
-__webpack_require__.d(components_namespaceObject, "SPostItem", function() { return SPostItem; });
 __webpack_require__.d(components_namespaceObject, "SMarkdown", function() { return SMarkdown; });
+__webpack_require__.d(components_namespaceObject, "SLabelClouds", function() { return SLabelClouds; });
 __webpack_require__.d(components_namespaceObject, "SPagination", function() { return SPagination; });
 __webpack_require__.d(components_namespaceObject, "TheBanner", function() { return TheBanner; });
+__webpack_require__.d(components_namespaceObject, "SPostItem", function() { return SPostItem; });
 
 // EXTERNAL MODULE: external "vue"
 var external_vue_ = __webpack_require__(0);
@@ -1493,17 +1493,17 @@ function shouldScrollToTop(route) {
 
 
 
-const _f6e37a78 = () => interopDefault(__webpack_require__.e(/* import() | pages/about/index */ 17).then(__webpack_require__.bind(null, 82)));
+const _f6e37a78 = () => interopDefault(__webpack_require__.e(/* import() | pages/about/index */ 17).then(__webpack_require__.bind(null, 80)));
 
-const _798d41fc = () => interopDefault(__webpack_require__.e(/* import() | pages/friends/index */ 19).then(__webpack_require__.bind(null, 83)));
+const _798d41fc = () => interopDefault(__webpack_require__.e(/* import() | pages/friends/index */ 19).then(__webpack_require__.bind(null, 81)));
 
-const _139b4522 = () => interopDefault(__webpack_require__.e(/* import() | pages/timeline/index */ 22).then(__webpack_require__.bind(null, 84)));
+const _139b4522 = () => interopDefault(__webpack_require__.e(/* import() | pages/timeline/index */ 22).then(__webpack_require__.bind(null, 82)));
 
-const _71c22b4c = () => interopDefault(__webpack_require__.e(/* import() | pages/archives/_id */ 18).then(__webpack_require__.bind(null, 85)));
+const _71c22b4c = () => interopDefault(__webpack_require__.e(/* import() | pages/archives/_id */ 18).then(__webpack_require__.bind(null, 83)));
 
-const _4dcb187f = () => interopDefault(__webpack_require__.e(/* import() | pages/post/_page */ 21).then(__webpack_require__.bind(null, 86)));
+const _4dcb187f = () => interopDefault(__webpack_require__.e(/* import() | pages/post/_page */ 21).then(__webpack_require__.bind(null, 84)));
 
-const _008ada7a = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 20).then(__webpack_require__.bind(null, 102)));
+const _008ada7a = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 20).then(__webpack_require__.bind(null, 100)));
 
 const emptyFn = () => {};
 
@@ -2266,7 +2266,7 @@ var default_component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var layouts_default = (default_component.exports);
 
 /* nuxt-component-imports */
-installComponents(default_component, {TheNav: function () { return __webpack_require__.e(/* import() | components/the-nav */ 16).then(__webpack_require__.bind(null, 87)).then(function(m) { return m['default'] || m }) },TheFooter: function () { return __webpack_require__.e(/* import() | components/the-footer */ 12).then(__webpack_require__.bind(null, 88)).then(function(m) { return m['default'] || m }) },TheBackTop: function () { return __webpack_require__.e(/* import() | components/the-back-top */ 10).then(__webpack_require__.bind(null, 89)).then(function(m) { return m['default'] || m }) }})
+installComponents(default_component, {TheNav: function () { return __webpack_require__.e(/* import() | components/the-nav */ 16).then(__webpack_require__.bind(null, 85)).then(function(m) { return m['default'] || m }) },TheFooter: function () { return __webpack_require__.e(/* import() | components/the-footer */ 12).then(__webpack_require__.bind(null, 86)).then(function(m) { return m['default'] || m }) },TheBackTop: function () { return __webpack_require__.e(/* import() | components/the-back-top */ 10).then(__webpack_require__.bind(null, 87)).then(function(m) { return m['default'] || m }) }})
 
 // CONCATENATED MODULE: ./.nuxt/App.js
 
@@ -2532,22 +2532,22 @@ function wrapFunctional(options) {
 }
 // CONCATENATED MODULE: ./.nuxt/components/index.js
 
-const SComment = __webpack_require__.e(/* import() | components/s-comment */ 2).then(__webpack_require__.bind(null, 90)).then(c => wrapFunctional(c.default || c));
-const SDialog = __webpack_require__.e(/* import() | components/s-dialog */ 3).then(__webpack_require__.bind(null, 91)).then(c => wrapFunctional(c.default || c));
-const TheAPlayer = __webpack_require__.e(/* import() | components/the-a-player */ 8).then(__webpack_require__.bind(null, 92)).then(c => wrapFunctional(c.default || c));
-const TheArchives = __webpack_require__.e(/* import() | components/the-archives */ 9).then(__webpack_require__.bind(null, 93)).then(c => wrapFunctional(c.default || c));
-const TheBackTop = __webpack_require__.e(/* import() | components/the-back-top */ 10).then(__webpack_require__.bind(null, 89)).then(c => wrapFunctional(c.default || c));
-const TheFooter = __webpack_require__.e(/* import() | components/the-footer */ 12).then(__webpack_require__.bind(null, 88)).then(c => wrapFunctional(c.default || c));
-const TheInfoCard = __webpack_require__.e(/* import() | components/the-info-card */ 13).then(__webpack_require__.bind(null, 94)).then(c => wrapFunctional(c.default || c));
-const TheLive2d = __webpack_require__.e(/* import() | components/the-live2d */ 14).then(__webpack_require__.bind(null, 95)).then(c => wrapFunctional(c.default || c));
-const TheLive2dTools = __webpack_require__.e(/* import() | components/the-live2d-tools */ 15).then(__webpack_require__.bind(null, 58)).then(c => wrapFunctional(c.default || c));
-const TheNav = __webpack_require__.e(/* import() | components/the-nav */ 16).then(__webpack_require__.bind(null, 87)).then(c => wrapFunctional(c.default || c));
-const SChip = __webpack_require__.e(/* import() | components/s-chip */ 1).then(__webpack_require__.bind(null, 96)).then(c => wrapFunctional(c.default || c));
-const SLabelClouds = __webpack_require__.e(/* import() | components/s-label-clouds */ 4).then(__webpack_require__.bind(null, 97)).then(c => wrapFunctional(c.default || c));
-const SPostItem = __webpack_require__.e(/* import() | components/s-post-item */ 7).then(__webpack_require__.bind(null, 98)).then(c => wrapFunctional(c.default || c));
-const SMarkdown = __webpack_require__.e(/* import() | components/s-markdown */ 5).then(__webpack_require__.bind(null, 99)).then(c => wrapFunctional(c.default || c));
-const SPagination = __webpack_require__.e(/* import() | components/s-pagination */ 6).then(__webpack_require__.bind(null, 100)).then(c => wrapFunctional(c.default || c));
-const TheBanner = __webpack_require__.e(/* import() | components/the-banner */ 11).then(__webpack_require__.bind(null, 101)).then(c => wrapFunctional(c.default || c));
+const SComment = __webpack_require__.e(/* import() | components/s-comment */ 2).then(__webpack_require__.bind(null, 88)).then(c => wrapFunctional(c.default || c));
+const SDialog = __webpack_require__.e(/* import() | components/s-dialog */ 3).then(__webpack_require__.bind(null, 89)).then(c => wrapFunctional(c.default || c));
+const TheAPlayer = __webpack_require__.e(/* import() | components/the-a-player */ 8).then(__webpack_require__.bind(null, 90)).then(c => wrapFunctional(c.default || c));
+const TheArchives = __webpack_require__.e(/* import() | components/the-archives */ 9).then(__webpack_require__.bind(null, 91)).then(c => wrapFunctional(c.default || c));
+const TheBackTop = __webpack_require__.e(/* import() | components/the-back-top */ 10).then(__webpack_require__.bind(null, 87)).then(c => wrapFunctional(c.default || c));
+const TheFooter = __webpack_require__.e(/* import() | components/the-footer */ 12).then(__webpack_require__.bind(null, 86)).then(c => wrapFunctional(c.default || c));
+const TheInfoCard = __webpack_require__.e(/* import() | components/the-info-card */ 13).then(__webpack_require__.bind(null, 92)).then(c => wrapFunctional(c.default || c));
+const TheLive2d = __webpack_require__.e(/* import() | components/the-live2d */ 14).then(__webpack_require__.bind(null, 93)).then(c => wrapFunctional(c.default || c));
+const TheLive2dTools = __webpack_require__.e(/* import() | components/the-live2d-tools */ 15).then(__webpack_require__.bind(null, 56)).then(c => wrapFunctional(c.default || c));
+const TheNav = __webpack_require__.e(/* import() | components/the-nav */ 16).then(__webpack_require__.bind(null, 85)).then(c => wrapFunctional(c.default || c));
+const SChip = __webpack_require__.e(/* import() | components/s-chip */ 1).then(__webpack_require__.bind(null, 94)).then(c => wrapFunctional(c.default || c));
+const SMarkdown = __webpack_require__.e(/* import() | components/s-markdown */ 5).then(__webpack_require__.bind(null, 95)).then(c => wrapFunctional(c.default || c));
+const SLabelClouds = __webpack_require__.e(/* import() | components/s-label-clouds */ 4).then(__webpack_require__.bind(null, 96)).then(c => wrapFunctional(c.default || c));
+const SPagination = __webpack_require__.e(/* import() | components/s-pagination */ 6).then(__webpack_require__.bind(null, 97)).then(c => wrapFunctional(c.default || c));
+const TheBanner = __webpack_require__.e(/* import() | components/the-banner */ 11).then(__webpack_require__.bind(null, 98)).then(c => wrapFunctional(c.default || c));
+const SPostItem = __webpack_require__.e(/* import() | components/s-post-item */ 7).then(__webpack_require__.bind(null, 99)).then(c => wrapFunctional(c.default || c));
 // CONCATENATED MODULE: ./.nuxt/components/plugin.js
 
 
@@ -3054,6 +3054,8 @@ var _nuxt_empty = __webpack_require__(3);
 
  // Source: ..\\plugins\\libs\\lib-vuex-persistedstate.client.js (mode: 'client')
 
+ // Source: ..\\plugins\\utils\\marked.client.js (mode: 'client')
+
  // Source: ..\\plugins\\libs\\lib-aos.client.js (mode: 'client')
 
  // Source: ..\\plugins\\libs\\lib-live2d.client.js (mode: 'client')
@@ -3305,6 +3307,8 @@ async function createApp(ssrContext, config = {}) {
   if (typeof /* Cannot get final name for export "default" in "./plugins/utils/filter.js" (known exports: , known reexports: ) */ undefined === 'function') {
     await /* Cannot get final name for export "default" in "./plugins/utils/filter.js" (known exports: , known reexports: ) */ undefined(app.context, inject);
   }
+
+  if (false) {}
 
   if (false) {}
 
@@ -3802,8 +3806,8 @@ const formatPost = ({
   const lines = getPartList(content); // 获取封面图 （默认为第一张图片）
 
   const cover = images[0] || {
-    title: null,
-    url: null
+    title: "",
+    url: "https://cdn.jsdelivr.net/gh/tsukiseele/awsl.re/static/icon/icon.png"
   }; // 获取描述，查找首个非图片行
 
   const description = lines.find(line => !getImages(line).length); //
@@ -4042,18 +4046,6 @@ const actions = {
   }
 
 };
-
-/***/ }),
-/* 32 */
-/***/ (function(module, exports) {
-
-module.exports = require("marked");
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports) {
-
-module.exports = require("dompurify");
 
 /***/ })
 /******/ ]);

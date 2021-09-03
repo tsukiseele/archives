@@ -23,6 +23,7 @@ import nuxt_plugin_filter_4c10d16b from 'nuxt_plugin_filter_4c10d16b' // Source:
 import nuxt_plugin_asciiclient_006b14db from 'nuxt_plugin_asciiclient_006b14db' // Source: ..\\plugins\\utils\\ascii.client.js (mode: 'client')
 import nuxt_plugin_libvuelazyloadclient_36ab4d92 from 'nuxt_plugin_libvuelazyloadclient_36ab4d92' // Source: ..\\plugins\\libs\\lib-vue-lazyload.client.js (mode: 'client')
 import nuxt_plugin_libvuexpersistedstateclient_42d5f384 from 'nuxt_plugin_libvuexpersistedstateclient_42d5f384' // Source: ..\\plugins\\libs\\lib-vuex-persistedstate.client.js (mode: 'client')
+import nuxt_plugin_markedclient_3a2950c4 from 'nuxt_plugin_markedclient_3a2950c4' // Source: ..\\plugins\\utils\\marked.client.js (mode: 'client')
 import nuxt_plugin_libaosclient_dcbfabe0 from 'nuxt_plugin_libaosclient_dcbfabe0' // Source: ..\\plugins\\libs\\lib-aos.client.js (mode: 'client')
 import nuxt_plugin_liblive2dclient_6ba0a5a2 from 'nuxt_plugin_liblive2dclient_6ba0a5a2' // Source: ..\\plugins\\libs\\lib-live2d.client.js (mode: 'client')
 import nuxt_plugin_libaplayerclient_124407cd from 'nuxt_plugin_libaplayerclient_124407cd' // Source: ..\\plugins\\libs\\lib-aplayer.client.js (mode: 'client')
@@ -261,6 +262,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (process.client && typeof nuxt_plugin_libvuexpersistedstateclient_42d5f384 === 'function') {
     await nuxt_plugin_libvuexpersistedstateclient_42d5f384(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_markedclient_3a2950c4 === 'function') {
+    await nuxt_plugin_markedclient_3a2950c4(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_libaosclient_dcbfabe0 === 'function') {
