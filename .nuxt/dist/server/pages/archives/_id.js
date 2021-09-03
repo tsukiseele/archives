@@ -131,7 +131,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var _id = __webpack_exports__["default"] = (component.exports);
 
 /* nuxt-component-imports */
-installComponents(component, {TheBanner: function () { return __webpack_require__.e(/* import() | components/the-banner */ 11).then(__webpack_require__.bind(null, 101)).then(function(m) { return m['default'] || m }) },SMarkdown: function () { return __webpack_require__.e(/* import() | components/s-markdown */ 5).then(__webpack_require__.bind(null, 98)).then(function(m) { return m['default'] || m }) },SComment: function () { return __webpack_require__.e(/* import() | components/s-comment */ 2).then(__webpack_require__.bind(null, 90)).then(function(m) { return m['default'] || m }) }})
+installComponents(component, {TheBanner: function () { return __webpack_require__.e(/* import() | components/the-banner */ 11).then(__webpack_require__.bind(null, 101)).then(function(m) { return m['default'] || m }) },SMarkdown: function () { return __webpack_require__.e(/* import() | components/s-markdown */ 5).then(__webpack_require__.bind(null, 99)).then(function(m) { return m['default'] || m }) },SComment: function () { return __webpack_require__.e(/* import() | components/s-comment */ 2).then(__webpack_require__.bind(null, 90)).then(function(m) { return m['default'] || m }) }})
 
 
 /***/ })

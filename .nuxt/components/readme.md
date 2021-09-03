@@ -18,7 +18,7 @@ You can directly use them in pages and other components without the need to impo
 - `<TheNav>` | `<the-nav>` (components/TheNav.vue) [async]
 - `<SChip>` | `<s-chip>` (components/SChip/index.vue) [async]
 - `<SLabelClouds>` | `<s-label-clouds>` (components/SLabelClouds/index.vue) [async]
+- `<SPostItem>` | `<s-post-item>` (components/SPostItem/SPostItem.vue) [async]
 - `<SMarkdown>` | `<s-markdown>` (components/SMarkdown/index.vue) [async]
 - `<SPagination>` | `<s-pagination>` (components/SPagination/index.vue) [async]
-- `<SPostItem>` | `<s-post-item>` (components/SPostItem/SPostItem.vue) [async]
 - `<TheBanner>` | `<the-banner>` (components/TheBanner/index.vue) [async]
