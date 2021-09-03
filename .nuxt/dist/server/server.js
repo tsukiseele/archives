@@ -691,9 +691,9 @@ __webpack_require__.d(components_namespaceObject, "TheLive2dTools", function() {
 __webpack_require__.d(components_namespaceObject, "TheNav", function() { return TheNav; });
 __webpack_require__.d(components_namespaceObject, "SChip", function() { return SChip; });
 __webpack_require__.d(components_namespaceObject, "SLabelClouds", function() { return SLabelClouds; });
+__webpack_require__.d(components_namespaceObject, "SMarkdown", function() { return SMarkdown; });
 __webpack_require__.d(components_namespaceObject, "SPagination", function() { return SPagination; });
 __webpack_require__.d(components_namespaceObject, "SPostItem", function() { return SPostItem; });
-__webpack_require__.d(components_namespaceObject, "SMarkdown", function() { return SMarkdown; });
 __webpack_require__.d(components_namespaceObject, "TheBanner", function() { return TheBanner; });
 
 // EXTERNAL MODULE: external "vue"
@@ -2544,9 +2544,9 @@ const TheLive2dTools = __webpack_require__.e(/* import() | components/the-live2d
 const TheNav = __webpack_require__.e(/* import() | components/the-nav */ 16).then(__webpack_require__.bind(null, 85)).then(c => wrapFunctional(c.default || c));
 const SChip = __webpack_require__.e(/* import() | components/s-chip */ 1).then(__webpack_require__.bind(null, 94)).then(c => wrapFunctional(c.default || c));
 const SLabelClouds = __webpack_require__.e(/* import() | components/s-label-clouds */ 4).then(__webpack_require__.bind(null, 95)).then(c => wrapFunctional(c.default || c));
-const SPagination = __webpack_require__.e(/* import() | components/s-pagination */ 6).then(__webpack_require__.bind(null, 96)).then(c => wrapFunctional(c.default || c));
-const SPostItem = __webpack_require__.e(/* import() | components/s-post-item */ 7).then(__webpack_require__.bind(null, 97)).then(c => wrapFunctional(c.default || c));
-const SMarkdown = __webpack_require__.e(/* import() | components/s-markdown */ 5).then(__webpack_require__.bind(null, 98)).then(c => wrapFunctional(c.default || c));
+const SMarkdown = __webpack_require__.e(/* import() | components/s-markdown */ 5).then(__webpack_require__.bind(null, 96)).then(c => wrapFunctional(c.default || c));
+const SPagination = __webpack_require__.e(/* import() | components/s-pagination */ 6).then(__webpack_require__.bind(null, 97)).then(c => wrapFunctional(c.default || c));
+const SPostItem = __webpack_require__.e(/* import() | components/s-post-item */ 7).then(__webpack_require__.bind(null, 98)).then(c => wrapFunctional(c.default || c));
 const TheBanner = __webpack_require__.e(/* import() | components/the-banner */ 11).then(__webpack_require__.bind(null, 99)).then(c => wrapFunctional(c.default || c));
 // CONCATENATED MODULE: ./.nuxt/components/plugin.js
 
