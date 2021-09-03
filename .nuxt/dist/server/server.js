@@ -43,7 +43,7 @@ module.exports =
 /******/
 /******/ 		// "0" is the signal for "already loaded"
 /******/ 		if(installedChunks[chunkId] !== 0) {
-/******/ 			var chunk = require("./" + ({"1":"components/s-chip","2":"components/s-comment","3":"components/s-dialog","4":"components/s-label-clouds","5":"components/s-markdown","6":"components/s-pagination","7":"components/s-post-item","8":"components/the-a-player","9":"components/the-archives","10":"components/the-back-top","11":"components/the-banner","12":"components/the-footer","13":"components/the-info-card","14":"components/the-live2d","15":"components/the-live2d-tools","16":"components/the-nav","17":"pages/about/index","18":"pages/archives/_id","19":"pages/friends/index","20":"pages/index","21":"pages/post/_page","22":"pages/timeline/index"}[chunkId]||chunkId) + ".js");
+/******/ 			var chunk = require("./" + ({"1":"components/s-chip","2":"components/s-comment","3":"components/s-dialog","4":"components/s-label-clouds","5":"components/s-markdown","6":"components/s-pagination","7":"components/s-post-item","8":"components/the-a-player","9":"components/the-back-top","10":"components/the-banner","11":"components/the-category","12":"components/the-footer","13":"components/the-info-card","14":"components/the-live2d","15":"components/the-live2d-tools","16":"components/the-nav","17":"pages/about/index","18":"pages/archives/_id","19":"pages/friends/index","20":"pages/index","21":"pages/post/_page","22":"pages/timeline/index"}[chunkId]||chunkId) + ".js");
 /******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
 /******/ 			for(var moduleId in moreModules) {
 /******/ 				modules[moduleId] = moreModules[moduleId];
@@ -682,19 +682,19 @@ __webpack_require__.r(components_namespaceObject);
 __webpack_require__.d(components_namespaceObject, "SComment", function() { return SComment; });
 __webpack_require__.d(components_namespaceObject, "SDialog", function() { return SDialog; });
 __webpack_require__.d(components_namespaceObject, "TheAPlayer", function() { return TheAPlayer; });
-__webpack_require__.d(components_namespaceObject, "TheArchives", function() { return TheArchives; });
 __webpack_require__.d(components_namespaceObject, "TheBackTop", function() { return TheBackTop; });
 __webpack_require__.d(components_namespaceObject, "TheFooter", function() { return TheFooter; });
 __webpack_require__.d(components_namespaceObject, "TheInfoCard", function() { return TheInfoCard; });
 __webpack_require__.d(components_namespaceObject, "TheLive2d", function() { return TheLive2d; });
 __webpack_require__.d(components_namespaceObject, "TheLive2dTools", function() { return TheLive2dTools; });
-__webpack_require__.d(components_namespaceObject, "TheNav", function() { return TheNav; });
 __webpack_require__.d(components_namespaceObject, "SChip", function() { return SChip; });
 __webpack_require__.d(components_namespaceObject, "SLabelClouds", function() { return SLabelClouds; });
-__webpack_require__.d(components_namespaceObject, "SMarkdown", function() { return SMarkdown; });
-__webpack_require__.d(components_namespaceObject, "SPagination", function() { return SPagination; });
 __webpack_require__.d(components_namespaceObject, "SPostItem", function() { return SPostItem; });
+__webpack_require__.d(components_namespaceObject, "SPagination", function() { return SPagination; });
+__webpack_require__.d(components_namespaceObject, "SMarkdown", function() { return SMarkdown; });
 __webpack_require__.d(components_namespaceObject, "TheBanner", function() { return TheBanner; });
+__webpack_require__.d(components_namespaceObject, "TheCategory", function() { return TheCategory; });
+__webpack_require__.d(components_namespaceObject, "TheNav", function() { return TheNav; });
 
 // EXTERNAL MODULE: external "vue"
 var external_vue_ = __webpack_require__(0);
@@ -2266,7 +2266,7 @@ var default_component = Object(componentNormalizer["a" /* default */])(
 /* harmony default export */ var layouts_default = (default_component.exports);
 
 /* nuxt-component-imports */
-installComponents(default_component, {TheNav: function () { return __webpack_require__.e(/* import() | components/the-nav */ 16).then(__webpack_require__.bind(null, 85)).then(function(m) { return m['default'] || m }) },TheFooter: function () { return __webpack_require__.e(/* import() | components/the-footer */ 12).then(__webpack_require__.bind(null, 86)).then(function(m) { return m['default'] || m }) },TheBackTop: function () { return __webpack_require__.e(/* import() | components/the-back-top */ 10).then(__webpack_require__.bind(null, 87)).then(function(m) { return m['default'] || m }) }})
+installComponents(default_component, {TheNav: function () { return __webpack_require__.e(/* import() | components/the-nav */ 16).then(__webpack_require__.bind(null, 85)).then(function(m) { return m['default'] || m }) },TheFooter: function () { return __webpack_require__.e(/* import() | components/the-footer */ 12).then(__webpack_require__.bind(null, 86)).then(function(m) { return m['default'] || m }) },TheBackTop: function () { return __webpack_require__.e(/* import() | components/the-back-top */ 9).then(__webpack_require__.bind(null, 87)).then(function(m) { return m['default'] || m }) }})
 
 // CONCATENATED MODULE: ./.nuxt/App.js
 
@@ -2535,19 +2535,19 @@ function wrapFunctional(options) {
 const SComment = __webpack_require__.e(/* import() | components/s-comment */ 2).then(__webpack_require__.bind(null, 88)).then(c => wrapFunctional(c.default || c));
 const SDialog = __webpack_require__.e(/* import() | components/s-dialog */ 3).then(__webpack_require__.bind(null, 89)).then(c => wrapFunctional(c.default || c));
 const TheAPlayer = __webpack_require__.e(/* import() | components/the-a-player */ 8).then(__webpack_require__.bind(null, 90)).then(c => wrapFunctional(c.default || c));
-const TheArchives = __webpack_require__.e(/* import() | components/the-archives */ 9).then(__webpack_require__.bind(null, 91)).then(c => wrapFunctional(c.default || c));
-const TheBackTop = __webpack_require__.e(/* import() | components/the-back-top */ 10).then(__webpack_require__.bind(null, 87)).then(c => wrapFunctional(c.default || c));
+const TheBackTop = __webpack_require__.e(/* import() | components/the-back-top */ 9).then(__webpack_require__.bind(null, 87)).then(c => wrapFunctional(c.default || c));
 const TheFooter = __webpack_require__.e(/* import() | components/the-footer */ 12).then(__webpack_require__.bind(null, 86)).then(c => wrapFunctional(c.default || c));
-const TheInfoCard = __webpack_require__.e(/* import() | components/the-info-card */ 13).then(__webpack_require__.bind(null, 92)).then(c => wrapFunctional(c.default || c));
-const TheLive2d = __webpack_require__.e(/* import() | components/the-live2d */ 14).then(__webpack_require__.bind(null, 93)).then(c => wrapFunctional(c.default || c));
+const TheInfoCard = __webpack_require__.e(/* import() | components/the-info-card */ 13).then(__webpack_require__.bind(null, 91)).then(c => wrapFunctional(c.default || c));
+const TheLive2d = __webpack_require__.e(/* import() | components/the-live2d */ 14).then(__webpack_require__.bind(null, 92)).then(c => wrapFunctional(c.default || c));
 const TheLive2dTools = __webpack_require__.e(/* import() | components/the-live2d-tools */ 15).then(__webpack_require__.bind(null, 56)).then(c => wrapFunctional(c.default || c));
+const SChip = __webpack_require__.e(/* import() | components/s-chip */ 1).then(__webpack_require__.bind(null, 93)).then(c => wrapFunctional(c.default || c));
+const SLabelClouds = __webpack_require__.e(/* import() | components/s-label-clouds */ 4).then(__webpack_require__.bind(null, 94)).then(c => wrapFunctional(c.default || c));
+const SPostItem = __webpack_require__.e(/* import() | components/s-post-item */ 7).then(__webpack_require__.bind(null, 95)).then(c => wrapFunctional(c.default || c));
+const SPagination = __webpack_require__.e(/* import() | components/s-pagination */ 6).then(__webpack_require__.bind(null, 96)).then(c => wrapFunctional(c.default || c));
+const SMarkdown = __webpack_require__.e(/* import() | components/s-markdown */ 5).then(__webpack_require__.bind(null, 97)).then(c => wrapFunctional(c.default || c));
+const TheBanner = __webpack_require__.e(/* import() | components/the-banner */ 10).then(__webpack_require__.bind(null, 98)).then(c => wrapFunctional(c.default || c));
+const TheCategory = __webpack_require__.e(/* import() | components/the-category */ 11).then(__webpack_require__.bind(null, 99)).then(c => wrapFunctional(c.default || c));
 const TheNav = __webpack_require__.e(/* import() | components/the-nav */ 16).then(__webpack_require__.bind(null, 85)).then(c => wrapFunctional(c.default || c));
-const SChip = __webpack_require__.e(/* import() | components/s-chip */ 1).then(__webpack_require__.bind(null, 94)).then(c => wrapFunctional(c.default || c));
-const SLabelClouds = __webpack_require__.e(/* import() | components/s-label-clouds */ 4).then(__webpack_require__.bind(null, 95)).then(c => wrapFunctional(c.default || c));
-const SMarkdown = __webpack_require__.e(/* import() | components/s-markdown */ 5).then(__webpack_require__.bind(null, 96)).then(c => wrapFunctional(c.default || c));
-const SPagination = __webpack_require__.e(/* import() | components/s-pagination */ 6).then(__webpack_require__.bind(null, 97)).then(c => wrapFunctional(c.default || c));
-const SPostItem = __webpack_require__.e(/* import() | components/s-post-item */ 7).then(__webpack_require__.bind(null, 98)).then(c => wrapFunctional(c.default || c));
-const TheBanner = __webpack_require__.e(/* import() | components/the-banner */ 11).then(__webpack_require__.bind(null, 99)).then(c => wrapFunctional(c.default || c));
 // CONCATENATED MODULE: ./.nuxt/components/plugin.js
 
 
@@ -2976,8 +2976,13 @@ function initResource() {
     },
 
     async getLabels() {
-      return await $axios.$get( // `https://api.github.com/repos/tsukiseele/Watora/issues/${number}`
+      return await $axios.$get( // `https://api.github.com/repos/tsukiseele/Watora/labels`
       `https://api.github.com/repos/chanshiyucx/blog/labels`);
+    },
+
+    async getMilestones() {
+      return await $axios.$get( // `https://api.github.com/repos/tsukiseele/Watora/milestones``
+      `https://api.github.com/repos/chanshiyucx/blog/milestones`);
     }
 
   });
@@ -3936,6 +3941,7 @@ const store_state = () => ({
   archives: [],
   archive: {},
   labels: [],
+  categorys: [],
   header: {
     title: "",
     subtitle: "",
@@ -4001,6 +4007,10 @@ const mutations = {
 
   labels(state, labels) {
     state.labels = labels;
+  },
+
+  categorys(state, categorys) {
+    state.categorys = categorys;
   }
 
 };
@@ -4043,6 +4053,12 @@ const actions = {
   }) {
     // 如果没有找到就请求
     commit("labels", await this.$service.getLabels());
+  },
+
+  async categorys({
+    commit
+  }) {
+    commit("categorys", await this.$service.getMilestones());
   }
 
 };
