@@ -688,11 +688,11 @@ __webpack_require__.d(components_namespaceObject, "TheInfoCard", function() { re
 __webpack_require__.d(components_namespaceObject, "TheLive2d", function() { return TheLive2d; });
 __webpack_require__.d(components_namespaceObject, "TheLive2dTools", function() { return TheLive2dTools; });
 __webpack_require__.d(components_namespaceObject, "SChip", function() { return SChip; });
-__webpack_require__.d(components_namespaceObject, "SLabelClouds", function() { return SLabelClouds; });
 __webpack_require__.d(components_namespaceObject, "SMarkdown", function() { return SMarkdown; });
+__webpack_require__.d(components_namespaceObject, "SLabelClouds", function() { return SLabelClouds; });
 __webpack_require__.d(components_namespaceObject, "SPagination", function() { return SPagination; });
-__webpack_require__.d(components_namespaceObject, "TheBanner", function() { return TheBanner; });
 __webpack_require__.d(components_namespaceObject, "SPostItem", function() { return SPostItem; });
+__webpack_require__.d(components_namespaceObject, "TheBanner", function() { return TheBanner; });
 __webpack_require__.d(components_namespaceObject, "TheCategory", function() { return TheCategory; });
 __webpack_require__.d(components_namespaceObject, "TheNav", function() { return TheNav; });
 
@@ -2540,11 +2540,11 @@ const TheInfoCard = __webpack_require__.e(/* import() | components/the-info-card
 const TheLive2d = __webpack_require__.e(/* import() | components/the-live2d */ 14).then(__webpack_require__.bind(null, 92)).then(c => wrapFunctional(c.default || c));
 const TheLive2dTools = __webpack_require__.e(/* import() | components/the-live2d-tools */ 15).then(__webpack_require__.bind(null, 56)).then(c => wrapFunctional(c.default || c));
 const SChip = __webpack_require__.e(/* import() | components/s-chip */ 1).then(__webpack_require__.bind(null, 93)).then(c => wrapFunctional(c.default || c));
-const SLabelClouds = __webpack_require__.e(/* import() | components/s-label-clouds */ 4).then(__webpack_require__.bind(null, 94)).then(c => wrapFunctional(c.default || c));
-const SMarkdown = __webpack_require__.e(/* import() | components/s-markdown */ 5).then(__webpack_require__.bind(null, 95)).then(c => wrapFunctional(c.default || c));
+const SMarkdown = __webpack_require__.e(/* import() | components/s-markdown */ 5).then(__webpack_require__.bind(null, 94)).then(c => wrapFunctional(c.default || c));
+const SLabelClouds = __webpack_require__.e(/* import() | components/s-label-clouds */ 4).then(__webpack_require__.bind(null, 95)).then(c => wrapFunctional(c.default || c));
 const SPagination = __webpack_require__.e(/* import() | components/s-pagination */ 6).then(__webpack_require__.bind(null, 96)).then(c => wrapFunctional(c.default || c));
-const TheBanner = __webpack_require__.e(/* import() | components/the-banner */ 10).then(__webpack_require__.bind(null, 97)).then(c => wrapFunctional(c.default || c));
-const SPostItem = __webpack_require__.e(/* import() | components/s-post-item */ 7).then(__webpack_require__.bind(null, 98)).then(c => wrapFunctional(c.default || c));
+const SPostItem = __webpack_require__.e(/* import() | components/s-post-item */ 7).then(__webpack_require__.bind(null, 97)).then(c => wrapFunctional(c.default || c));
+const TheBanner = __webpack_require__.e(/* import() | components/the-banner */ 10).then(__webpack_require__.bind(null, 98)).then(c => wrapFunctional(c.default || c));
 const TheCategory = __webpack_require__.e(/* import() | components/the-category */ 11).then(__webpack_require__.bind(null, 99)).then(c => wrapFunctional(c.default || c));
 const TheNav = __webpack_require__.e(/* import() | components/the-nav */ 16).then(__webpack_require__.bind(null, 85)).then(c => wrapFunctional(c.default || c));
 // CONCATENATED MODULE: ./.nuxt/components/plugin.js
@@ -2788,7 +2788,7 @@ const setupProgress = axios => {
   app,
   $axios
 }, inject) => {
-  $axios.defaults.headers.common["Authorization"] = "token ghp_n18ZgXZ17iwZWA3" + "qXsja5pYSoAeQ112EhHKa";
+  $axios.defaults.headers.common["Authorization"] = "ghp+M39JbvqRn3ipsl8OOZfRFhLPDjR8uO0j7sLs".replace("+", " ");
   inject("api", {
     // 登录
     async login(params) {

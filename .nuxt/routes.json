@@ -3,42 +3,36 @@
     "name": "about",
     "path": "/about",
     "component": "D:\\\\Projects\\\\Github\\\\Watora\\\\pages\\\\about\\\\index.vue",
-    "chunkName": "pages/about/index",
-    "_name": "_f6e37a78"
+    "chunkName": "pages/about/index"
   },
   {
     "name": "friends",
     "path": "/friends",
     "component": "D:\\\\Projects\\\\Github\\\\Watora\\\\pages\\\\friends\\\\index.vue",
-    "chunkName": "pages/friends/index",
-    "_name": "_798d41fc"
+    "chunkName": "pages/friends/index"
   },
   {
     "name": "timeline",
     "path": "/timeline",
     "component": "D:\\\\Projects\\\\Github\\\\Watora\\\\pages\\\\timeline\\\\index.vue",
-    "chunkName": "pages/timeline/index",
-    "_name": "_139b4522"
+    "chunkName": "pages/timeline/index"
   },
   {
     "name": "archives-id",
     "path": "/archives/:id?",
     "component": "D:\\\\Projects\\\\Github\\\\Watora\\\\pages\\\\archives\\\\_id.vue",
-    "chunkName": "pages/archives/_id",
-    "_name": "_71c22b4c"
+    "chunkName": "pages/archives/_id"
   },
   {
     "name": "post-page",
     "path": "/post/:page?",
     "component": "D:\\\\Projects\\\\Github\\\\Watora\\\\pages\\\\post\\\\_page.vue",
-    "chunkName": "pages/post/_page",
-    "_name": "_4dcb187f"
+    "chunkName": "pages/post/_page"
   },
   {
     "name": "index",
     "path": "/",
     "component": "D:\\\\Projects\\\\Github\\\\Watora\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_008ada7a"
+    "chunkName": "pages/index"
   }
 ]
