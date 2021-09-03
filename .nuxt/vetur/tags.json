@@ -29,17 +29,17 @@
   "SLabelClouds": {
     "description": "Auto imported from components/SLabelClouds/index.vue"
   },
-  "SPostItem": {
-    "description": "Auto imported from components/SPostItem/SPostItem.vue"
+  "SMarkdown": {
+    "description": "Auto imported from components/SMarkdown/index.vue"
   },
   "SPagination": {
     "description": "Auto imported from components/SPagination/index.vue"
   },
-  "SMarkdown": {
-    "description": "Auto imported from components/SMarkdown/index.vue"
-  },
   "TheBanner": {
     "description": "Auto imported from components/TheBanner/index.vue"
+  },
+  "SPostItem": {
+    "description": "Auto imported from components/SPostItem/SPostItem.vue"
   },
   "TheCategory": {
     "description": "Auto imported from components/TheCategory/index.vue"
